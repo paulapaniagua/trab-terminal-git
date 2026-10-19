@@ -1,5 +1,5 @@
 # Datos inventados de una bandeja; cada elemento es un instrumento.
-instrumentos = ["pinza","tijera", "pinza"]
+instrumentos = ["pinza", "tijera", "pinza"]
 esperadas = 2
 observadas = 0
 

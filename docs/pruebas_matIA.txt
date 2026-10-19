@@ -1,3 +1,44 @@
-2 pinzas: coincide
-1 pinza: faltan pinzas
-3 pinzas: sobran pinzas
+PRUEBAS DE MATIA - RECUENTO DE PINZAS
+Cantidad esperada en todos los casos: 2 pinzas.
+Comando utilizado (desde la carpeta trab_terminal_git): py src/recuento_matIA.py
+Para cada caso solo se cambia la linea 2 del codigo, guardamos y ejecutamos.
+
+CASO 1: COINCIDE
+Lista: ["pinza", "tijera", "pinza"]
+Esperadas: 2
+Prediccion: 2 pinzas observadas, resultado "coincide". Hay dos "pinza" y una
+"tijera"; la tijera no suma porque no cumple la condicion instrumento == "pinza".
+Comando: py src/recuento_matIA.py
+Salida real:
+  Pinzas esperadas: 2
+  Pinzas observadas: 2
+  Resultado: coincide
+Conclusion: la salida coincide con la prediccion. Como 2 no es menor ni mayor
+que 2, se ejecuta el else.
+
+CASO 2: FALTAN PINZAS
+Lista: ["tijera", "pinza"]
+Esperadas: 2
+Prediccion: 1 pinza observada, resultado "faltan pinzas". Solo hay una "pinza"
+y 1 es menor que 2, asi que se cumple la condicion observadas < esperadas.
+Comando: py src/recuento_matIA.py
+Salida real:
+  Pinzas esperadas: 2
+  Pinzas observadas: 1
+  Resultado: faltan pinzas
+Conclusion: la salida coincide con la prediccion.
+
+CASO 3: SOBRAN PINZAS
+Lista: ["pinza", "pinza", "tijera", "pinza"]
+Esperadas: 2
+Prediccion: 3 pinzas observadas, resultado "sobran pinzas". Hay tres "pinza";
+3 no es menor que 2, pero si es mayor, asi que se cumple el elif.
+Comando: py src/recuento_matIA.py
+Salida real:
+  Pinzas esperadas: 2
+  Pinzas observadas: 3
+  Resultado: sobran pinzas
+Conclusion: la salida coincide con la prediccion.
+
+Al terminar devolvi la lista inicial ["pinza", "tijera", "pinza"] y guarde el
+informe con: py src/recuento_matIA.py > resultados/informe_matIA.txt
